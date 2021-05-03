@@ -17,6 +17,6 @@ import Entities.Veterinaire;
 public interface IUtilisateur {
     
     public void SignIn (Utilisateur u);
-    
+    public String LogIn (Utilisateur u);
     
 }

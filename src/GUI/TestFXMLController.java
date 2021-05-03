@@ -3,18 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Controllers;
+package GUI;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
 
 /**
  * FXML Controller class
  *
  * @author Nesrine
  */
-public class TestController implements Initializable {
+public class TestFXMLController implements Initializable {
+
+    @FXML
+    private Button btnOK;
+    @FXML
+    private AnchorPane anc;
 
     /**
      * Initializes the controller class.

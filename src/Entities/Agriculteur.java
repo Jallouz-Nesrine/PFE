@@ -5,15 +5,17 @@
  */
 package Entities;
 
+import java.util.List;
+
 /**
  *
  * @author Nesrine
  */
 public class Agriculteur extends Utilisateur{
     private String adresse;
-	private String region;
-	private int score;
-	
+    private String region;
+    private int score;
+    private List<Vache> vaches;
 	
 	
 	public String getAdresse() {

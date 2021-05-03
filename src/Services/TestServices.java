@@ -37,21 +37,21 @@ public class TestServices {
         ServicesAgriculteur AgS = new ServicesAgriculteur();
         ServiceUtilisateur UtS = new ServiceUtilisateur();
         
-        String dat= "12/03/1956";
+       String dat= "12/03/1956";
         //Inscription d'un utilisateur
        Entities.Agriculteur ag = new Entities.Agriculteur( "amin", "amin", dat, 1, "amin@gmail.com", 54178965, "amin123", "rades", "ben arous",0 );
        UtS.signIn(ag);
        
        
-       /*String date1 = "12/05/2021";
+       /* String date1 = "12/05/2021";
         String date2 = "17/05/2021";
         float k=(float) 1525.25;
-       Entities.Offre o1  = new Entities.Offre("abs" , date1 , date2 ,175 , "collier", 15 ,20,k);
+       Entities.Offre o1  = new Entities.Offre("abs" , date1 , date2 ,k , "collier", 15 ,20,0);
        AdS.AjouterOffre(o1);*/
         
         //Ajout d'une vache
-       // Entities.Vache v = new Entities.Vache(1,1,1,23,"r1", 2, "femelle", "fait","dossier1" , false);
-        //AgS.AjouterVache(v);
+      // Entities.Vache v = new Entities.Vache(1,1,1,23,"r1", 2, "femelle", "fait","dossier1" , 0);
+       // AgS.AjouterVache(v);
         
         //Suppression d'une vache
         /*Entities.Vache v1 = new Entities.Vache();

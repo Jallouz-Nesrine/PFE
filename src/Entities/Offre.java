@@ -19,6 +19,10 @@ public class Offre {
 	private int qt_offre;
 	private int nb_participants;
 	private int note;
+
+    public Offre(String abs, String date1, String date2, float k, String collier, int i, int i0, int i1) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 	
 	
 	public int getId_offre() {
@@ -138,10 +142,7 @@ public class Offre {
 	}
 
 
-	public Offre(String nom2, String date1, String date2, int prix_offre2, String produits2, int qt_offre2,
-			int nb_participants2, float k) {
-		// TODO Auto-generated constructor stub
-	}
+	
 	
 	
 }

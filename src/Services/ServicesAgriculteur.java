@@ -27,7 +27,7 @@ public void AjouterVache ( Vache v) {
         try {
             
                   Statement ste = db.createStatement();
-              String req1 = "INSERT INTO `vache` (`id_vache`, `id_agri`, `id_vet`, `numero`, `race`, `age`, `sexe`, `vaccin`, `dossier_medical`, `periode_chaleur`) VALUES ('"+v.getId_vache()+"','"+v.getId_vache()+"','"+v.getId_vet()+"','"+v.getNumero()+"','"+v.getRace()+"','"+v.getAge()+"','"+v.getSexe()+"','"+v.getVaccin()+"','"+v.getDossier_medical()+"','"+v.isPeriode_chaleur()+"');";
+              String req1 = "INSERT INTO `vache` (`id_vache`, `id_agri`, `id_vet`, `numero`, `race`, `age`, `sexe`, `vaccin`, `dossier_medical`, `periode_chaleur`) VALUES ('"+v.getId_vache()+"','"+v.getId_vache()+"','"+v.getId_vet()+"','"+v.getNumero()+"','"+v.getRace()+"','"+v.getAge()+"','"+v.getSexe()+"','"+v.getVaccin()+"','"+v.getDossier_medical()+"','"+v.getPeriode_chaleur()+"');";
                          
               ste.executeUpdate(req1);
        
@@ -62,7 +62,7 @@ public void SupprimerVache ( Vache v, int id_vache) {
 public void ModifierVache (int t , Vache v) {
     try {   
        
-  String sql1 = "UPDATE `vache`  SET `race`='" + v.getRace() + "',`age`='" + v.getAge() +"',`sexe`='"+v.getSexe()+"',`vaccin`= '"+v.getVaccin()+"' ,`dossier_medical` ='"+v.getDossier_medical()+"',`periode_chaleur` ='"+v.isPeriode_chaleur()+"' WHERE id ='" +t+ "';";
+  String sql1 = "UPDATE `vache`  SET `race`='" + v.getRace() + "',`age`='" + v.getAge() +"',`sexe`='"+v.getSexe()+"',`vaccin`= '"+v.getVaccin()+"' ,`dossier_medical` ='"+v.getDossier_medical()+"',`periode_chaleur` ='"+v.getPeriode_chaleur()+"' WHERE id ='" +t+ "';";
 
    PreparedStatement ste1 = db.prepareStatement(sql1);
    ste1.executeUpdate();
@@ -94,7 +94,7 @@ v2.setAge(result.getInt("age"));
 v2.setSexe(result.getString("sexe"));
 v2.setVaccin(result.getString("vaccin"));
 v2.setDossier_medical(result.getString("Dossier_medical"));
-v2.setPeriode_chaleur(result.getBoolean("periode_chaleur"));
+v2.setPeriode_chaleur(result.getInt("periode_chaleur"));
 
 
 Va.add(v2);

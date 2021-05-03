@@ -5,13 +5,16 @@
  */
 package Entities;
 
+import java.util.List;
+
 /**
  *
  * @author Nesrine
  */
 public class Veterinaire extends Utilisateur{
     private String adresse;
-	private int note;
+    private int note;
+    private List<Vache> vaches;
 	
 	
 	

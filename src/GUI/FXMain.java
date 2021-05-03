@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package test;
+package GUI;
 
+import test.*;
 import java.io.IOException;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -13,6 +14,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
@@ -23,8 +25,8 @@ import javafx.stage.Stage;
 public class FXMain extends Application {
     
     @Override
-    public void start(Stage primaryStage) {
-      Button btn = new Button();
+    //public void start(Stage primaryStage) {
+     /* Button btn = new Button();
         btn.setText("Say 'Hello World'");
         btn.setOnAction(new EventHandler<ActionEvent>() {
             
@@ -41,16 +43,15 @@ public class FXMain extends Application {
         
         primaryStage.setTitle("Hello World!");
         primaryStage.setScene(scene);
-        primaryStage.show();
-     
-    /*public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/GUI/LOGIN.fxml"));
+        primaryStage.show();*/
+     public void start(Stage stage) throws IOException {
+         System.out.println("test1");
+        Parent root = FXMLLoader.load(getClass().getResource("testFXML.fxml"));
         
-        Scene scene = new Scene(root);
-        
-        stage.setScene(scene);
+        stage.setTitle("IEPCP");
+        stage.setScene(new Scene(root ));
         stage.show();
-    }*/
+    }
     
 
     /**

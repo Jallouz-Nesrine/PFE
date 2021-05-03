@@ -12,13 +12,14 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import Utiles.BCrypt;
+import java.sql.*;
 /**
  *
  * @author Nesrine
  */
 public class ServiceUtilisateur {
   Connection db = MyConnexion.Get_Instance().getCon();
-	
+  public static int conn ; 	
 	
 	 public void signIn(Utilisateur u) 
 	    {
@@ -42,4 +43,36 @@ public class ServiceUtilisateur {
 	            System.out.println("Erreur lors de l'inscription " + ex.getMessage());
 	        }
 	    }
+
+
+public String LogIn(Utilisateur u) {
+        String f ="hi";
+        try {
+            String loginQry = "SELECT id,roles FROM user WHERE username = ? AND password= ?";
+            PreparedStatement ste;
+            ste = db.prepareStatement(loginQry);
+            ste.setString(1, u.getEmail());
+            ste.setString(2, u.getMot_de_passe());
+            ResultSet rs = ste.executeQuery();
+            if(rs.next()){
+                System.out.println("Connexion accomplie");
+                f=rs.getString("roles");
+                conn=rs.getInt("id");
+                }
+            else if(rs==null){
+                f="hi";
+            }
+            return f;
+        } 
+        catch (SQLException ex) {
+            System.out.println("erreur lors de la connexion ");
+        }
+        return null;
+    }
+
+
+
+
+
+
 }

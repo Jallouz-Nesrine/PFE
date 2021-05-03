@@ -19,7 +19,7 @@ public class Vache {
 	private String sexe;
 	private String vaccin;
 	private String dossier_medical;
-	private boolean periode_chaleur;
+	private int periode_chaleur;
 	
 
 	
@@ -86,14 +86,6 @@ public class Vache {
 
 
 
-
-	public boolean isPeriode_chaleur() {
-		return periode_chaleur;
-	}
-
-
-
-
 	public void setId_vache(int id_vache) {
 		this.id_vache = id_vache;
 	}
@@ -155,69 +147,21 @@ public class Vache {
 	}
 
 
-
-
-	public void setPeriode_chaleur(boolean periode_chaleur) {
-		this.periode_chaleur = periode_chaleur;
+        
+	public int getPeriode_chaleur() {
+		return periode_chaleur;
 	}
 
-	public Vache(int numero, String race, int age, String sexe, String vaccin, String dossier_medical,
-			boolean periode_chaleur) {
-		this.numero = numero;
-		this.race = race;
-		this.age = age;
-		this.sexe = sexe;
-		this.vaccin = vaccin;
-		this.dossier_medical = dossier_medical;
+
+
+
+	public void setPeriode_chaleur(int periode_chaleur) {
 		this.periode_chaleur = periode_chaleur;
 	}
 
 
-
-
-	public Vache () {
-		
-	}
-
-
-
-
-	public Vache(String string, int i, String string2, String sexe2, String vaccin2, boolean b, int j) {
-		// TODO Auto-generated constructor stub
-	}
-
-
-
-
-	public Vache(int i, int j, String string, int k, String string2, String string3, String string4, boolean b, int l) {
-		// TODO Auto-generated constructor stub
-	}
-
-
-
-
-	public Vache(int i, int j, String string, int k, String string2, String string3, String string4, int l, int m) {
-		// TODO Auto-generated constructor stub
-	}
-
-
-
-
-	public Vache(int i, int j, int k, int l, String string, int m, String string2, String string3, String string4,
-			int n) {
-		// TODO Auto-generated constructor stub
-	}
-
-
-
-
-	
-
-
-
-
-	public Vache(int id_vache, int id_agri, int id_vet, int numero, String race, int age, String sexe, String vaccin,
-			String dossier_medical, boolean periode_chaleur) {
+        public Vache(int id_vache, int id_agri, int id_vet, int numero, String race, int age, String sexe, String vaccin,
+			String dossier_medical, int periode_chaleur) {
 		super();
 		this.id_vache = id_vache;
 		this.id_agri = id_agri;
@@ -230,6 +174,22 @@ public class Vache {
 		this.dossier_medical = dossier_medical;
 		this.periode_chaleur = periode_chaleur;
 	}
+
+
+	public Vache () {
+		
+	}
+
+
+
+
+	
+
+	
+
+
+
+
 
 
 }
